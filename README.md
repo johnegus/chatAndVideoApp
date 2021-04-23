@@ -2,6 +2,14 @@
 
 # Realtime Chat Application
 
+### Realtime Chat
+
+![ERD](/chat.png)
+
+### Video Calling
+
+![ERD](/video.png)
+
 ### Technologies Used
 
 - JavaScript
