@@ -1,11 +1,22 @@
+# ![ERD](/client/src/chatCat.png)
+
 # Realtime Chat Application
 
-![Video Chat](https://i.ibb.co/7WZRLD1/122.jpg)
+### Technologies Used
+
+- JavaScript
+- React
+- Express
+- Material-UI
+- socket.io
+- react-chat-engine
 
 ## Introduction
-This is a code repository for the corresponding video tutorial. 
 
-In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.
+This is a combination video and text chat application to connect with friends and family, responsive on any device.
 
-Setup:
-- run ```npm i && npm start``` for both client and server side to start the development server
+## Setup:
+
+- currently you need to make a project at https://chatengine.io/ and populate it with users
+- then you can insert your projectID into the App.js file where specified
+- run `npm i && npm start` for both client and server side to start the development server

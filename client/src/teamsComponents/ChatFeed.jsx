@@ -1,6 +1,7 @@
 import MessageForm from './MessageForm';
 import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
+import chatCat from "../chatCat.png"
 
 
 const ChatFeed = (props) => {
@@ -47,12 +48,20 @@ const ChatFeed = (props) => {
     }
 
 
-    if(!chat) return 'Loading...'
+    if(!chat) return (
+        <>
+          <main className="centered middled">
+            <b className='text'>Loading chats...</b>
+            <img className='icon-progress' height='200px' width='200px' src={chatCat} alt='chatCat logo' />
+          </main>
+        </>
+        )
+
     return (
         <div className="chat-feed">
             <div className='chat-title-container'>
                 <div className='chat-title'>
-                    {chat.title} sadfasdffsda
+                    {chat.title}
                 </div>
                 <div className='chat-subtitle'>
                     {chat.people.map((person) => ` ${person.person.username}`)}

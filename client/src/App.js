@@ -40,13 +40,15 @@ const useStyles = makeStyles((theme) => ({
 
 const App = () => {
   const [screen, setScreen] = useState("video");
+  const [refreshPage, setRefreshPage] = useState("");
   const classes = useStyles();
   if (!localStorage.getItem("username")) return <LoginForm />;
   return (
     <>
       <div className="button-container">
         <Button
-          variant={screen === "chat" ? "contained" : "outlined"}
+          className="pad"
+          variant="contained"
           onClick={async () => {
             setScreen("chat");
           }}
@@ -54,12 +56,23 @@ const App = () => {
           Chat
         </Button>
         <Button
-          variant={screen === "video" ? "contained" : "outlined"}
+          variant="contained"
           onClick={async () => {
             setScreen("video");
+            location.reload();
           }}
         >
           Video
+        </Button>
+        <Button
+          variant="contained"
+          onClick={async () => {
+            localStorage.removeItem("username");
+            localStorage.removeItem("password");
+            setRefreshPage("refresh");
+          }}
+        >
+          Log Out
         </Button>
       </div>
 

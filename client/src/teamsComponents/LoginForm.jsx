@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import chatCat from "../chatCat.png"
 
 
 const LoginForm = () => {
@@ -25,7 +26,11 @@ const LoginForm = () => {
     return (
         <div className="wrapper">
             <div className="form">
-                <h1 className="title">chatCat</h1>
+                <div className="logo-container"> 
+                    <img  className="centered middled" src={chatCat} alt="logo"></img>
+                </div>
+                
+                {/* <h1 className="title">chatCat</h1> */}
                 <form onSubmit={handleSubmit}>
                     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required />
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" required />
